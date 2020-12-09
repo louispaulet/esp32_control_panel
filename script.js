@@ -7,12 +7,6 @@ $(document).ready(function(){
     });
 });
 
-function sendValue() {
-		var xhttp = new XMLHttpRequest();
-		xhttp.open("GET", "test", true);
-		xhttp.send();
-}
-
 $(function() {
     $("#mySlider").slider({
 		max: 255,
