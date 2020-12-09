@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Led manager</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'charset='UTF-8'/>
+    <link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body class="w3-animate-opacity">
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="index.html" class="w3-bar-item w3-button">index</a>
+        <a href="solid.html" class="w3-bar-item w3-button">solid</a>
+        <a href="strombo.html" class="w3-bar-item w3-button">strombo</a>
+        <a href="wave.html" class="w3-bar-item w3-button">wave</a>
+      </div>
+
+      <div class="w3-teal">
+        <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰ Modes</button>
+        <div class="w3-container w3-center">
+          <h1>LED Manager</h1>
+        </div>
+      </div>
+    
+
+    <div class="w3-margin w3-center w3-card w3-padding-24">
+        <h3 class="w3-padding">allumer/eteindre la LED</h3>
+        <button onclick="onButton()" class="w3-button w3-green w3-xlarge w3-ripple w3_wide" style="width: 40%;">ON</button>
+        <button onclick="offButton()" class="w3-button w3-red w3-xlarge w3-ripple w3_wide" style="width: 40%;">OFF</button>
+        <br><br>
+    </div>
+
+    <div class="w3-margin w3-center w3-card w3-padding-24">
+        <h3 class="w3-padding">valeur puissance</h3>
+        <button onclick="onButton()" class="w3-button w3-green w3-xlarge w3-ripple w3_wide" style="width: 40%;">ON</button>
+        <button onclick="offButton()" class="w3-button w3-red w3-xlarge w3-ripple w3_wide" style="width: 40%;">OFF</button>
+        <br><br>
+    </div>
+
+    <div class="w3-margin w3-center w3-card w3-padding-24">
+      <h3 class="w3-padding">vitesse de clignotement</h3>
+      <input type="hidden" class="slider-input" value="23" />
+
+    </div> 
+
+
+    <div>
+      <input type="submit" value="envoie valeur">
+    </div>
+
+    <div>
+      <form action="" method ="post">
+        input1: <input type="text" name="input1">
+        <input type="submit" value="Submit">
+      </form><br>
+    </div>
+
+    <div class="slidecontainer">
+		<div id="mySlider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"></div>
+	</div>
+      <p>Value: <span id="sliderValueDisplay">0</span></p>
+    </div>
+</body>
+</html>
